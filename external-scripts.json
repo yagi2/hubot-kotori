@@ -1,4 +1,5 @@
 [
+	"debug",
 	"githubot",
 	"hubot-diagnostics",
 	"hubot-help",

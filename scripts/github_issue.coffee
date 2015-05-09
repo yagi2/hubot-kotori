@@ -5,7 +5,7 @@
 #   @shokai
 
 debug = require('debug')('hubot-github-issue')
-repo  = process.env.HUBOT_GITHUB_ISSUE_REPO or "masuilab/todo"
+repo  = process.env.HUBOT_GITHUB_ISSUE_REPO
 
 module.exports = (robot) ->
   github = require('githubot')(robot)
