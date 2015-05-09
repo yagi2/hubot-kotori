@@ -10,6 +10,6 @@ module.exports = (robot) ->
       .get() (err, res, body) ->
         text = JSON.parse(body)
         
-        res = text[0]["type"] + "所属の" + text[0]["character_name"] + "(" + text[0]["character_name_ruby"] + ")ちゃん！\n誕生日は" + text[0]["character_birth_month"] + "月" + text[0]["character_birth_day"] + "日で，血液型は" + text[0]["character_blood_type"] + "ね！\nパーソナルカラーは" + text[0]["character_color"] + "で，CVは" + text[0]["cv_name"] + "(" + text[0]["cv_name_ruby"] + "さんね！ ニックネームは" + text[0]["cv_nickname"] + "よ！" 
+        res = text[0]["type"] + "プロダクション所属の" + text[0]["character_name"] + "(" + text[0]["character_name_ruby"] + ")ちゃん！\n誕生日は" + text[0]["character_birth_month"] + "月" + text[0]["character_birth_day"] + "日で，血液型は" + text[0]["character_blood_type"] + "ね！\nパーソナルカラーは" + text[0]["character_color"] + "で，CVは" + text[0]["cv_name"] + "(" + text[0]["cv_name_ruby"] + ")さんね！ ニックネームは" + text[0]["cv_nickname"] + "よ！" 
         
         msg.send res
