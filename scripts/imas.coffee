@@ -1,3 +1,18 @@
+# Description
+#	A Hubot script that respond puchim@s images
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   hubot はるかさん
+#
+# Author:
+#   Yagi2 <mail@yagi2.com>
+#
 module.exports = (robot) ->
 	robot.respond /はるかさん/i, (msg) ->
 		msg.send msg.random [

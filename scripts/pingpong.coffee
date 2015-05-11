@@ -1,5 +1,17 @@
-# Description:
-#   PINGPONG!
+# Description
+#	A Hubot script that respond PINGPONG!!!
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   hubot PINGPONG
+#
+# Author:
+#   Yagi2 <mail@yagi2.com>
 #
 
 module.exports = (robot) ->

@@ -1,7 +1,18 @@
-# Description:
-#   This script is echo info of idolm@ster's character, and search her image.
+# Description
+#   A Hubot script that respond imas character's information and image.
 #
-
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   hubot info me アイドル名
+#
+# Author:
+#   Yagi2 <mail@yagi2.com>
+#
 module.exports = (robot) ->
   robot.respond /imas info( me)? (.*)/i,(msg) ->
     
