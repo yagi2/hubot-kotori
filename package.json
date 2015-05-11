@@ -18,7 +18,16 @@
     "hubot-scripts": "^2.5.16",
     "hubot-shipit": "^0.2.0",
     "hubot-slack": "^3.3.0",
-    "hubot-youtube": "^0.1.2"
+    "hubot-youtube": "^0.1.2",
+    "coffee-script": "1.6.3"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "sinon": "*"
+  },
+  "scripts": {
+    "test": "mocha --compilers coffee:coffee-script"
   },
   "engines": {
     "node": "0.10.x"
