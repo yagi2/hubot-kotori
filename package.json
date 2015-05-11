@@ -23,8 +23,7 @@
     "hubot-shipit": "^0.2.0",
     "hubot-slack": "^3.3.0",
     "hubot-youtube": "^0.1.2",
-    "coffee-script": "1.6.3",
-    "npm": "2.7.5"
+    "coffee-script": "1.6.3"
   },
   "devDependencies": {
     "mocha": "*",
