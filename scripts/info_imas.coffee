@@ -1,5 +1,5 @@
 # Description:
-#   Example scripts for you to examine and try out.
+#   This script is echo info of idolm@ster's character, and search her image.
 #
 
 module.exports = (robot) ->
