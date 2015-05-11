@@ -2,7 +2,8 @@ language: node_js
 node_js:
 - 0.8
 before_install:
-- npm install -g npm@2.7.5
+- npm update -g npm
+- npm --version
 notifications:
   emai: false
   slack:
