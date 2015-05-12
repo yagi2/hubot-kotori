@@ -1,9 +1,13 @@
 language: node_js
 node_js:
-- 0.8
+    - 0.8
+sudo: false
+cache:
+  directories:
+    - node_modules
 before_install:
-- npm update -g npm
-- npm --version
+  - npm update -g npm
+  - npm --version
 notifications:
   emai: false
   slack:
