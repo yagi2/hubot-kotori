@@ -22,7 +22,7 @@ module.exports = (robot) ->
       .get() (err, res, body) ->
         text = JSON.parse(body)
         
-        mes = text[0]["type"] + "プロダクション所属の" + text[0]["ch_name"] + "(" + text[0]["ch_name_ruby"] + ")ちゃん！\n誕生日は" + text[0]["ch_birth_month"] + "月" + text[0]["ch_birth_day"] + "日で，血液型は" + text[0]["ch_blood_type"] + "ね！\nパーソナルカラーは" + text[0]["ch_color"] + "で，CVは" + text[0]["cv_name"] + "(" + text[0]["cv_name_ruby"] + ")さんね！ ニックネームは" + text[0]["cv_nickname"] + "よ！" 
+        mes = text[0]["type"] + "所属の" + text[0]["ch_name"] + "(" + text[0]["ch_name_ruby"] + ")ちゃん！\n誕生日は" + text[0]["ch_birth_month"] + "月" + text[0]["ch_birth_day"] + "日で，血液型は" + text[0]["ch_blood_type"] + "ね！\nパーソナルカラーは" + text[0]["ch_color"] + "で，CVは" + text[0]["cv_name"] + "(" + text[0]["cv_name_ruby"] + ")さんね！ ニックネームは" + text[0]["cv_nickname"] + "よ！" 
         
         msg.send mes
     
