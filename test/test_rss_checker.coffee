@@ -1,8 +1,8 @@
 path = require 'path'
-require path.resolve 'tests', 'test_helper'
+require path.resolve 'test', 'test_helper'
 
 assert     = require 'assert'
-RSSChecker = require path.resolve 'libs', 'rss-checker'
+RSSChecker = require path.resolve 'test', 'rss-checker'
 Promise    = require 'bluebird'
 
 checker = new RSSChecker {}
