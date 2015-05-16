@@ -9,7 +9,7 @@ checker = new RSSChecker {}
 
 describe 'RSSChecker', ->
 
-  it 'sohuld have method "fetch"', ->
+  it 'should have method "fetch"', ->
     assert.equal typeof checker['fetch'], 'function'
 
   describe 'method "fetch"', ->
