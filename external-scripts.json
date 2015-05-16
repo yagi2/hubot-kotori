@@ -9,6 +9,5 @@
 	"hubot-redis-brain",
 	"hubot-rules",
 	"hubot-shipit",
-	"hubot-youtube",
-	"hubot-rss-reader"
+	"hubot-youtube"
 ]

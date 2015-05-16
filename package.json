@@ -9,7 +9,6 @@
     "url": "https://github.com/yagi2/hubot-kotori.git"
   },
   "dependencies": {
-    "coffee-script": "1.6.3",
     "hubot": "^2.12.0",
     "hubot-diagnostics": "0.0.1",
     "hubot-google-images": "^0.1.4",
@@ -19,21 +18,12 @@
     "hubot-maps": "0.0.2",
     "hubot-pugme": "^0.1.0",
     "hubot-redis-brain": "0.0.2",
-    "hubot-rss-reader": "^0.6.7",
     "hubot-rules": "^0.1.0",
     "hubot-scripts": "^2.5.16",
     "hubot-shipit": "^0.2.0",
     "hubot-slack": "^3.3.0",
     "hubot-youtube": "^0.1.2",
-    "async": "*",
-    "bluebird": "*",
-    "cheerio": "*",
-    "debug": "*",
-    "feedparser": "*",
-    "find-rss": "*",
-    "html-entities": "*",
-    "lodash": "*",
-    "request": "*"
+    "coffee-script": "1.6.3"
   },
   "devDependencies": {
     "mocha": "*",
