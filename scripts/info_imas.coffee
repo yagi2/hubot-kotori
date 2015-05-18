@@ -16,7 +16,7 @@
 module.exports = (robot) ->
   robot.respond /imas info( me)? (.*)/i,(msg) ->
     
-    imas_api_query = c_name: msg.match[2]
+    imas_api_query = ch_name: msg.match[2]
     msg.http('http://api.yagi2.com/imas/character/list')
       .query(imas_api_query)
       .get() (err, res, body) ->
