@@ -36,3 +36,16 @@ module.exports = (robot) ->
         image = msg.random images
         
         msg.send image.unescapedUrl
+
+  robot.respond /imas birthday( me)? (.*)/i,(msg) ->
+    
+    imas_api_query = ch_birth_month: msg.match[2]
+    msg.http('http://api.yagi2.com/imas/character/list')
+      .query(imas_api_query)
+      .get() (err, res, body) ->
+        text = JSON.parse(body)
+        
+        msg.send text[0]["ch_birth_month"] + "月生まれのアイドルは" + text["result"] + "人いるわね！\n";
+        
+        for i in[0..text["result"]-1]
+          msg.send text[i]["ch_name"] + "ちゃん！（" + text[i]["ch_birth_month"] + "月" + text[i]["ch_birth_day"] + "日生まれ）" 
