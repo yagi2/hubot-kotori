@@ -37,6 +37,8 @@ module.exports = (robot) ->
               image = msg.random images
        
               msg.send image.unescapedUrl
+         else
+           msg.send msg.match[2] + "というアイドルは所属してないわ……"
 
   robot.respond /imas birthday( me)? (.*)/i,(msg) ->
     
