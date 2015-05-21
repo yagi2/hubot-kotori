@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot info me アイドル名
+#   hubot imas [command] me [argument]
 #
 # Author:
 #   Yagi2 <mail@yagi2.com>
@@ -56,10 +56,11 @@ module.exports = (robot) ->
   
   robot.respond /imas cv( me)? (.*)/i,(msg) ->
     
-    imas_api_query = cv_name: msg.match[2]
+    imas_api_query_full = cv_name: msg.match[2]
+    imas_api_query_nick = cv_nickname: msg.match[2]
     
     msg.http('http://api.yagi2.com/imas/character/list')
-      .query(imas_api_query)
+      .query(imas_api_query_full)
       .get() (err, res, body) ->
         text = JSON.parse(body)
         if text["result"] isnt 0
@@ -75,3 +76,23 @@ module.exports = (robot) ->
               image = msg.random images
        
               msg.send image.unescapedUrl
+        else
+          msg.http('http://api.yagi2.com/imas/character/list')
+            .query(imas_api_query_nick)
+            .get() (err, res, body) ->
+              text = JSON.parse(body)
+              if text["result"] isnt 0
+                msg.send text[0]["cv_name"] + "(" + text[0]["cv_name_ruby"] + ")さんは誕生日が" + text[0]["cv_birth_month"] + "月" + text[0]["cv_birth_day"] + "日！\nニックネームは" + text[0]["cv_nickname"] + "で演じるのは" + text[0]["type"] + "所属の" + text[0]["ch_name"] + "(" + text[0]["ch_name_ruby"] + ")ちゃんよ！"
+          
+                image_query = v: '1.0', rsz: '8', q: msg.match[2], safe: 'active'
+                msg.http('http://ajax.googleapis.com/ajax/services/search/images')
+                  .query(image_query)
+                  .get() (err, res, body) ->
+                    images = JSON.parse(body)
+                    images = images.responseData?.results        
+              
+                    image = msg.random images
+       
+                    msg.send image.unescapedUrl
+              else
+                msg.send msg.match[2] + "という声優さんは登録されてないわ……"
