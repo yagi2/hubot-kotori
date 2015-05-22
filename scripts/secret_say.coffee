@@ -17,4 +17,4 @@ module.exports = (robot) ->
   robot.respond /secret say (.*)/i,(msg) ->
 	  mes = msg.match[1].split(" ")
 	  
-	  msg.send { room: mes[0] }, mes[1]
+	  msg.send { room: "sandbox" }, mes[1]
