@@ -18,4 +18,4 @@ module.exports = (robot) ->
 	  mes = msg.match[1].split(" ")
 	  
 	  robot.send {room: mes[0]}, mes[1]
-	  msg.send "#" + mes[0] + "にこっそり代わりに発言しておきましたよ，プロデューサーさん。"
+	  msg.send "#" + mes[0] + " にこっそり代わりに発言しておきましたよ，プロデューサーさん。"
