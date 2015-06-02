@@ -20,4 +20,4 @@ module.exports = (robot) ->
     
     q = text1: mes[0], text2: mes[1]
     
-    msg.send 'https://enjo-generator.herokuapp.com/api/create-enjo?text1=' + mes[0] + '&text2=' + mes[1]
+    msg.send 'https://enjo-generator.herokuapp.com/api/create-enjo?text1=' + encodeURIComponent(mes[0]) + '&text2=' + encodeURIComponent(mes[1])
